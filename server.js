@@ -3,6 +3,12 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8000;
 
+
+app.get('/', function (req, res) {
+    res.send('We are at the root route of our server');
+});
+
+
 app.listen(port, function (err) {
     if(err){
         console.log("error while starting server");
@@ -12,6 +18,3 @@ app.listen(port, function (err) {
     }
 });
 
-app.get('/', function (req, res) {
-   res.send('We are at the root route of our server');
-});
